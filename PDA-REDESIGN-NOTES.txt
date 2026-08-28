@@ -1,0 +1,24 @@
+PERUBAHAN HALAMAN PDA TEST
+
+Saya mempertahankan project lama dan hanya mengubah halaman pda-test.html, menambahkan CSS redesign yang di-scope dengan prefix .pda-, serta memperbarui js/script.js untuk menu mobile dan lightbox foto.
+
+File baru:
+images/logo-lst.png
+images/pda-test-lapangan-1.jpg
+images/pda-test-lapangan-2.jpg
+
+CARA MENAMBAH FOTO AKTIVITAS LAGI
+
+1. Masukkan foto ke folder images.
+2. Misalnya beri nama: pda-test-lapangan-3.jpg
+3. Duplikasi satu <article class="pda-activity-card"> di pda-test.html.
+4. Ganti kedua referensi foto menjadi images/pda-test-lapangan-3.jpg:
+   - data-image="images/pda-test-lapangan-3.jpg"
+   - src="images/pda-test-lapangan-3.jpg"
+5. Ganti alt, kategori/lokasi, nama proyek, deskripsi, dan tanggal.
+6. Simpan lalu refresh.
+
+JavaScript tidak perlu diubah. Semua tombol foto yang memakai class .pda-image-button otomatis mendapat fitur fullscreen/lightbox.
+
+CATATAN:
+Nomor WhatsApp, email, dan alamat pada halaman masih memakai data yang ada di code lama/contoh. Silakan ganti jika data perusahaan final berbeda.

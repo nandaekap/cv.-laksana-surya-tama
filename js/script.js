@@ -1,0 +1,434 @@
+// ===== Menu mobile halaman PDA Test =====
+const pdaMenuToggle = document.getElementById('pdaMenuToggle');
+const pdaMenu = document.getElementById('pdaMenu');
+
+if (pdaMenuToggle && pdaMenu) {
+  pdaMenuToggle.addEventListener('click', () => {
+    const open = pdaMenu.classList.toggle('open');
+    pdaMenuToggle.setAttribute('aria-expanded', String(open));
+  });
+
+  pdaMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      pdaMenu.classList.remove('open');
+      pdaMenuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  const layanan = pdaMenu.querySelector('.pda-dropdown > button');
+  const dropdown = pdaMenu.querySelector('.pda-dropdown');
+  if (layanan && dropdown) {
+    layanan.addEventListener('click', () => dropdown.classList.toggle('open'));
+  }
+}
+
+// ===== Lightbox dokumentasi aktivitas PDA Test =====
+const pdaModal = document.getElementById('pdaModal');
+const pdaModalImage = document.getElementById('pdaModalImage');
+const pdaModalClose = document.getElementById('pdaModalClose');
+
+function closePdaModal() {
+  if (!pdaModal) return;
+  pdaModal.classList.remove('open');
+  pdaModal.setAttribute('aria-hidden', 'true');
+  if (pdaModalImage) pdaModalImage.src = '';
+}
+
+document.querySelectorAll('.pda-image-button').forEach((button) => {
+  button.addEventListener('click', () => {
+    if (!pdaModal || !pdaModalImage) return;
+    pdaModalImage.src = button.dataset.image;
+    pdaModalImage.alt = button.dataset.alt || 'Dokumentasi PDA Test';
+    pdaModal.classList.add('open');
+    pdaModal.setAttribute('aria-hidden', 'false');
+  });
+});
+
+if (pdaModalClose) pdaModalClose.addEventListener('click', closePdaModal);
+if (pdaModal) {
+  pdaModal.addEventListener('click', (event) => {
+    if (event.target === pdaModal) closePdaModal();
+  });
+}
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closePdaModal();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const serviceCards = document.querySelectorAll(".service-item");
+
+    serviceCards.forEach(function (card) {
+
+        card.style.cursor = "pointer";
+
+        card.addEventListener("click", function () {
+
+            const title = card.querySelector("h3");
+
+            if (!title) return;
+
+            const serviceName = title.textContent.trim().toLowerCase();
+
+            if (serviceName === "pda test") {
+                window.location.href = "pda-test.html";
+            }
+
+            else if (serviceName === "soil test") {
+                window.location.href = "soil-test.html";
+            }
+
+            else if (serviceName === "borpile") {
+                window.location.href = "borpile.html";
+            }
+
+            else if (serviceName === "layanan lainnya") {
+                window.location.href = "other.html";
+            }
+
+        });
+
+    });
+
+});
+/* =========================================
+   TAMBAH FOTO AKTIVITAS
+========================================= */
+
+const activityAddBtn =
+    document.getElementById("activityAddBtn");
+
+const activityUploadForm =
+    document.getElementById("activityUploadForm");
+
+const activityFormClose =
+    document.getElementById("activityFormClose");
+
+const activityCancelBtn =
+    document.getElementById("activityCancelBtn");
+
+const activitySaveBtn =
+    document.getElementById("activitySaveBtn");
+
+const activityPhoto =
+    document.getElementById("activityPhoto");
+
+const activityPreview =
+    document.getElementById("activityPreview");
+
+const activityPreviewImage =
+    document.getElementById("activityPreviewImage");
+
+const activityGallery =
+    document.getElementById("activityGallery");
+
+const activityTitle =
+    document.getElementById("activityTitle");
+
+const activityCategory =
+    document.getElementById("activityCategory");
+
+const activityLocation =
+    document.getElementById("activityLocation");
+
+const activityDate =
+    document.getElementById("activityDate");
+
+
+let selectedActivityImage = null;
+
+
+/* =========================================
+   BUKA FORM
+========================================= */
+
+if (activityAddBtn) {
+
+    activityAddBtn.addEventListener(
+        "click",
+        function () {
+
+            activityUploadForm.classList.add("open");
+
+            activityAddBtn.style.display = "none";
+
+        }
+    );
+
+}
+
+
+/* =========================================
+   TUTUP FORM
+========================================= */
+
+function closeActivityForm() {
+
+    activityUploadForm.classList.remove("open");
+
+    activityAddBtn.style.display = "inline-flex";
+
+}
+
+
+if (activityFormClose) {
+
+    activityFormClose.addEventListener(
+        "click",
+        closeActivityForm
+    );
+
+}
+
+
+if (activityCancelBtn) {
+
+    activityCancelBtn.addEventListener(
+        "click",
+        closeActivityForm
+    );
+
+}
+
+
+/* =========================================
+   PREVIEW FOTO
+========================================= */
+
+if (activityPhoto) {
+
+    activityPhoto.addEventListener(
+        "change",
+        function () {
+
+            const file = this.files[0];
+
+            if (!file) {
+                return;
+            }
+
+
+            /* Validasi tipe file */
+
+            if (!file.type.startsWith("image/")) {
+
+                alert(
+                    "File harus berupa gambar."
+                );
+
+                this.value = "";
+
+                return;
+            }
+
+
+            /* Maksimal 5 MB */
+
+            if (file.size > 5 * 1024 * 1024) {
+
+                alert(
+                    "Ukuran foto maksimal 5 MB."
+                );
+
+                this.value = "";
+
+                return;
+            }
+
+
+            const reader =
+                new FileReader();
+
+
+            reader.onload =
+                function (event) {
+
+                    selectedActivityImage =
+                        event.target.result;
+
+                    activityPreviewImage.src =
+                        selectedActivityImage;
+
+                    activityPreview.classList.add(
+                        "has-image"
+                    );
+
+                };
+
+
+            reader.readAsDataURL(file);
+
+        }
+    );
+
+}
+
+
+/* =========================================
+   FORMAT TANGGAL
+========================================= */
+
+function formatActivityDate(date) {
+
+    if (!date) {
+        return "";
+    }
+
+
+    const parts =
+        date.split("-");
+
+
+    const activityDateObject =
+        new Date(
+            parts[0],
+            parts[1] - 1,
+            parts[2]
+        );
+
+
+    return activityDateObject
+        .toLocaleDateString(
+            "id-ID",
+            {
+                day: "numeric",
+                month: "long",
+                year: "numeric"
+            }
+        );
+
+}
+
+
+/* =========================================
+   SIMPAN FOTO
+========================================= */
+
+if (activitySaveBtn) {
+
+    activitySaveBtn.addEventListener(
+        "click",
+        function () {
+
+
+            /* Validasi */
+
+            if (!selectedActivityImage) {
+
+                alert(
+                    "Silakan pilih foto terlebih dahulu."
+                );
+
+                return;
+            }
+
+
+            if (!activityTitle.value.trim()) {
+
+                alert(
+                    "Silakan isi judul aktivitas."
+                );
+
+                activityTitle.focus();
+
+                return;
+            }
+
+
+            if (!activityCategory.value) {
+
+                alert(
+                    "Silakan pilih jenis layanan."
+                );
+
+                return;
+            }
+
+
+            /* Buat card */
+
+            const card =
+                document.createElement("article");
+
+
+            card.className =
+                "activity-added-card";
+
+
+            card.innerHTML = `
+
+                <div class="activity-added-image">
+
+                    <img
+                        src="${selectedActivityImage}"
+                        alt="${activityTitle.value}">
+
+                </div>
+
+
+                <div class="activity-added-body">
+
+                    <span class="activity-added-category">
+                        ${activityCategory.value}
+                    </span>
+
+                    <h3>
+                        ${activityTitle.value}
+                    </h3>
+
+                    <p>
+                        ${
+                            activityLocation.value ||
+                            "Lokasi belum ditambahkan"
+                        }
+                    </p>
+
+                    <time>
+                        ${
+                            formatActivityDate(
+                                activityDate.value
+                            )
+                        }
+                    </time>
+
+                </div>
+
+            `;
+
+
+            /* Tambahkan ke gallery */
+
+            activityGallery.prepend(card);
+
+
+            /* Reset */
+
+            activityPhoto.value = "";
+
+            activityTitle.value = "";
+
+            activityCategory.value = "";
+
+            activityLocation.value = "";
+
+            activityDate.value = "";
+
+            selectedActivityImage = null;
+
+
+            activityPreviewImage.src = "";
+
+            activityPreview.classList.remove(
+                "has-image"
+            );
+
+
+            /* Tutup form */
+
+            closeActivityForm();
+
+        }
+    );
+
+}

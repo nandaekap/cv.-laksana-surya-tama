@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Aktivitas & Dokumentasi Proyek - CV. Laksana Surya Tama">
+<title>Aktivitas | CV. Laksana Surya Tama</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="pda-page">
+
+<header class="pda-header">
+  <div class="pda-nav-wrap">
+    <a href="index.html" class="pda-logo" aria-label="CV Laksana Surya Tama">
+      <img src="images/logo-lst.png" alt="CV. Laksana Surya Tama">
+    </a>
+
+    <button class="pda-menu-toggle" id="pdaMenuToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+
+    <nav class="pda-menu" id="pdaMenu">
+      <a href="index.html#beranda">Beranda</a>
+      <a href="index.html#tentang">Tentang Kami</a>
+      <div class="pda-dropdown">
+        <button type="button">Layanan <span>⌄</span></button>
+        <div class="pda-dropdown-panel">
+          <a href="pda-test.html">PDA Test</a>
+          <a href="index.html#layanan">Soil Test</a>
+          <a href="index.html#layanan">Borpile</a>
+          <a href="index.html#layanan">CPT / Sondir</a>
+          <a href="index.html#layanan">Jacking Test</a>
+        </div>
+      </div>
+      <a href="aktivitas.html">Aktivitas</a>
+      <a href="index.html#kontak">Kontak</a>
+      <a href="index.html#kontak" class="pda-header-cta">Hubungi Kami</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="pda-container" style="padding:44px 0 6px;">
+    <div class="pda-breadcrumb"><a href="index.html">Beranda</a><span>›</span><span>Aktivitas</span></div>
+  </section>
+
+  <section class="pda-activities pda-container" style="padding-top:6px;">
+    <div class="pda-section-heading">
+      <p class="pda-label">DOKUMENTASI KEGIATAN</p>
+      <h2>Aktivitas &amp; Dokumentasi Proyek</h2>
+      <div class="pda-heading-line"></div>
+      <p>Kumpulan dokumentasi foto kegiatan pengujian tanah dan pondasi yang kami lakukan di berbagai proyek. Foto-foto di bawah ini adalah contoh — ganti dengan dokumentasi kegiatan Anda.</p>
+    </div>
+
+    <!-- =========================================
+     TAMBAH FOTO AKTIVITAS
+========================================= -->
+
+<div class="activity-upload-area">
+
+    <button
+        type="button"
+        class="activity-add-btn"
+        id="activityAddBtn">
+
+        + Tambah Foto
+
+    </button>
+
+
+    <!-- FORM TAMBAH FOTO -->
+    <div
+        class="activity-upload-form"
+        id="activityUploadForm">
+
+        <div class="activity-form-header">
+
+            <div>
+                <h3>Tambah Dokumentasi</h3>
+                <p>Tambahkan foto aktivitas proyek.</p>
+            </div>
+
+            <button
+                type="button"
+                class="activity-form-close"
+                id="activityFormClose">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <div class="activity-form-grid">
+
+            <!-- Upload Foto -->
+            <div class="activity-form-group activity-file-group">
+
+                <label for="activityPhoto">
+                    Foto
+                </label>
+
+                <label
+                    for="activityPhoto"
+                    class="activity-file-box">
+
+                    <span class="activity-upload-icon">
+                        ↑
+                    </span>
+
+                    <strong>
+                        Pilih Foto
+                    </strong>
+
+                    <small>
+                        JPG, JPEG, PNG
+                    </small>
+
+                    <input
+                        type="file"
+                        id="activityPhoto"
+                        accept="image/png,image/jpeg">
+
+                </label>
+
+            </div>
+
+
+            <!-- Preview -->
+            <div
+                class="activity-preview"
+                id="activityPreview">
+
+                <span>
+                    Preview foto akan muncul di sini
+                </span>
+
+                <img
+                    id="activityPreviewImage"
+                    src=""
+                    alt="Preview">
+
+            </div>
+
+
+            <!-- Judul -->
+            <div class="activity-form-group">
+
+                <label for="activityTitle">
+                    Judul Aktivitas
+                </label>
+
+                <input
+                    type="text"
+                    id="activityTitle"
+                    placeholder="Contoh: PDA Test Proyek Tangerang">
+
+            </div>
+
+
+            <!-- Jenis -->
+            <div class="activity-form-group">
+
+                <label for="activityCategory">
+                    Jenis Layanan
+                </label>
+
+                <select id="activityCategory">
+
+                    <option value="">
+                        Pilih layanan
+                    </option>
+
+                    <option value="PDA Test">
+                        PDA Test
+                    </option>
+
+                    <option value="Soil Test">
+                        Soil Test
+                    </option>
+
+                    <option value="Borpile">
+                        Borpile
+                    </option>
+
+                    <option value="CPT / Sondir">
+                        CPT / Sondir
+                    </option>
+
+                    <option value="Jacking Test">
+                        Jacking Test
+                    </option>
+
+                    <option value="Survey Topografi">
+                        Survey Topografi
+                    </option>
+
+                    <option value="Lainnya">
+                        Lainnya
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Lokasi -->
+            <div class="activity-form-group">
+
+                <label for="activityLocation">
+                    Lokasi
+                </label>
+
+                <input
+                    type="text"
+                    id="activityLocation"
+                    placeholder="Contoh: Tangerang, Banten">
+
+            </div>
+
+
+            <!-- Tanggal -->
+            <div class="activity-form-group">
+
+                <label for="activityDate">
+                    Tanggal
+                </label>
+
+                <input
+                    type="date"
+                    id="activityDate">
+
+            </div>
+
+        </div>
+
+
+        <div class="activity-form-actions">
+
+            <button
+                type="button"
+                class="activity-cancel-btn"
+                id="activityCancelBtn">
+
+                Batal
+
+            </button>
+
+            <button
+                type="button"
+                class="activity-save-btn"
+                id="activitySaveBtn">
+
+                Simpan Foto
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+    <div class="pda-activity-grid pda-activity-grid--gallery">
+
+      <article class="pda-activity-card">
+        <button class="pda-image-button" type="button" data-image="images/pda-test-lapangan-1.jpg" data-alt="Ganti dengan judul kegiatan" aria-label="Lihat foto dokumentasi">
+          <img src="images/pda-test-lapangan-1.jpg" alt="Ganti dengan judul kegiatan">
+          <span>+</span>
+        </button>
+        <div class="pda-activity-body">
+          <small>KATEGORI · LOKASI</small>
+          <h3>Judul Kegiatan</h3>
+          <p>Nama Klien · Nama Proyek</p>
+          <time datetime="2026-01-01">Tanggal Kegiatan</time>
+        </div>
+      </article>
+
+      <article class="pda-activity-card">
+        <button class="pda-image-button" type="button" data-image="images/pda-test-lapangan-2.jpg" data-alt="Ganti dengan judul kegiatan" aria-label="Lihat foto dokumentasi">
+          <img src="images/pda-test-lapangan-2.jpg" alt="Ganti dengan judul kegiatan">
+          <span>+</span>
+        </button>
+        <div class="pda-activity-body">
+          <small>KATEGORI · LOKASI</small>
+          <h3>Judul Kegiatan</h3>
+          <p>Nama Klien · Nama Proyek</p>
+          <time datetime="2026-01-01">Tanggal Kegiatan</time>
+        </div>
+      </article>
+
+      <article class="pda-activity-card">
+        <button class="pda-image-button" type="button" data-image="images/tentang-kami.jpg" data-alt="Ganti dengan judul kegiatan" aria-label="Lihat foto dokumentasi">
+          <img src="images/tentang-kami.jpg" alt="Ganti dengan judul kegiatan">
+          <span>+</span>
+        </button>
+        <div class="pda-activity-body">
+          <small>KATEGORI · LOKASI</small>
+          <h3>Judul Kegiatan</h3>
+          <p>Nama Klien · Nama Proyek</p>
+          <time datetime="2026-01-01">Tanggal Kegiatan</time>
+        </div>
+      </article>
+
+      <article class="pda-activity-card">
+        <button class="pda-image-button" type="button" data-image="images/pda-test-lapangan-1.jpg" data-alt="Ganti dengan judul kegiatan" aria-label="Lihat foto dokumentasi">
+          <img src="images/pda-test-lapangan-1.jpg" alt="Ganti dengan judul kegiatan">
+          <span>+</span>
+        </button>
+        <div class="pda-activity-body">
+          <small>KATEGORI · LOKASI</small>
+          <h3>Judul Kegiatan</h3>
+          <p>Nama Klien · Nama Proyek</p>
+          <time datetime="2026-01-01">Tanggal Kegiatan</time>
+        </div>
+      </article>
+
+      <article class="pda-activity-card">
+        <button class="pda-image-button" type="button" data-image="images/pda-test-lapangan-2.jpg" data-alt="Ganti dengan judul kegiatan" aria-label="Lihat foto dokumentasi">
+          <img src="images/pda-test-lapangan-2.jpg" alt="Ganti dengan judul kegiatan">
+          <span>+</span>
+        </button>
+        <div class="pda-activity-body">
+          <small>KATEGORI · LOKASI</small>
+          <h3>Judul Kegiatan</h3>
+          <p>Nama Klien · Nama Proyek</p>
+          <time datetime="2026-01-01">Tanggal Kegiatan</time>
+        </div>
+      </article>
+
+      <article class="pda-activity-card">
+        <button class="pda-image-button" type="button" data-image="images/tentang-kami.jpg" data-alt="Ganti dengan judul kegiatan" aria-label="Lihat foto dokumentasi">
+          <img src="images/tentang-kami.jpg" alt="Ganti dengan judul kegiatan">
+          <span>+</span>
+        </button>
+        <div class="pda-activity-body">
+          <small>KATEGORI · LOKASI</small>
+          <h3>Judul Kegiatan</h3>
+          <p>Nama Klien · Nama Proyek</p>
+          <time datetime="2026-01-01">Tanggal Kegiatan</time>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="pda-gallery-note">Dokumentasi kegiatan lainnya akan ditambahkan secara berkala.</p>
+  </section>
+
+  <section class="pda-cta pda-container" style="margin-top:60px;">
+    <div>
+      <p>BUTUH LAYANAN PENGUJIAN UNTUK PROYEK ANDA?</p>
+      <h2>Konsultasikan Kebutuhan Proyek Anda</h2>
+      <span>Tim ahli kami siap membantu memastikan kualitas pondasi proyek Anda.</span>
+    </div>
+    <div class="pda-cta-buttons">
+      <a class="pda-btn pda-btn-light" href="https://wa.me/6281234567890" target="_blank" rel="noopener">Konsultasi via WhatsApp</a>
+      <a class="pda-btn pda-btn-transparent" href="index.html#kontak">Hubungi Kami</a>
+    </div>
+  </section>
+</main>
+
+<footer class="pda-footer" id="kontak">
+  <div class="pda-container pda-footer-grid">
+    <div class="pda-footer-company">
+      <img src="images/logo-lst.png" alt="CV. Laksana Surya Tama" class="pda-footer-logo">
+      <p>Melayani kebutuhan pengujian tanah dan pondasi dengan akurasi tinggi dan standar profesional.</p>
+    </div>
+    <div>
+      <h3>Link Cepat</h3>
+      <a href="index.html#beranda">Beranda</a>
+      <a href="index.html#tentang">Tentang Kami</a>
+      <a href="index.html#layanan">Layanan</a>
+      <a href="aktivitas.html">Aktivitas</a>
+      <a href="index.html#kontak">Kontak</a>
+    </div>
+    <div>
+      <h3>Layanan Kami</h3>
+      <a href="pda-test.html">PDA Test</a>
+      <a href="index.html#layanan">Soil Test</a>
+      <a href="index.html#layanan">Borpile</a>
+      <a href="index.html#layanan">CPT / Sondir</a>
+      <a href="index.html#layanan">Jacking Test</a>
+    </div>
+    <div>
+      <h3>Hubungi Kami</h3>
+      <a href="tel:+6281234567890">☎ +62 812-3456-7890</a>
+      <a href="mailto:info@laksanasuryatama.co.id">✉ info@laksanasuryatama.co.id</a>
+      <span>⌖ Alamat kantor perusahaan</span>
+    </div>
+  </div>
+  <div class="pda-container pda-footer-bottom">
+    <span>© 2026 CV. Laksana Surya Tama. All Rights Reserved.</span>
+    <span>Privacy Policy · Terms of Service</span>
+  </div>
+</footer>
+
+<div class="pda-modal" id="pdaModal" aria-hidden="true">
+  <button type="button" id="pdaModalClose" aria-label="Tutup foto">×</button>
+  <img id="pdaModalImage" src="" alt="Dokumentasi kegiatan">
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
