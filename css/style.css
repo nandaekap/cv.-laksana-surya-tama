@@ -2725,11 +2725,21 @@ footer{background:var(--navy-900);color:rgba(255,255,255,.75);padding:64px 0 26p
   padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.1);
 }
 .footer-logo{
-  display:block;width:180px;height:auto;max-height:52px;
-  object-fit:contain;object-position:left center;
-  background:#fff;border-radius:6px;padding:6px;
-  margin-bottom:16px;
+    display:block;
+    width:180px;
+    height:auto;
+    max-height:52px;
+
+    object-fit:contain;
+    object-position:left center;
+
+    background:transparent;
+    border-radius:0;
+    padding:0;
+
+    margin-bottom:16px;
 }
+
 .footer-grid p{font-size:14px;line-height:1.7;color:rgba(255,255,255,.55);}
 footer h4{color:#fff;font-size:15px;margin-bottom:18px;font-family:'Sora',sans-serif;}
 footer ul li{margin-bottom:11px;}
@@ -7077,6 +7087,1752 @@ footer ul li a:hover{color:var(--orange-500);}
 
     .activity-upload-form {
         padding: 20px;
+    }
+
+}
+/* =========================================
+   FIX SEMUA LOGO FOOTER
+========================================= */
+
+.footer-logo,
+.pda-footer-logo,
+.soil-footer-logo,
+.borpile-footer-logo,
+.other-footer-logo,
+.footer-company img,
+.pda-footer-company img,
+.soil-footer-company img,
+.borpile-footer-company img,
+.other-footer-company img {
+    background: transparent !important;
+    background-color: transparent !important;
+
+    padding: 0 !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
+
+    height: auto !important;
+
+    object-fit: contain;
+    object-position: left center;
+}
+
+/* =========================================================
+   HOME SOIL TEST REDESIGN
+========================================================= */
+
+.home-soil-page {
+    --home-navy: #062c5b;
+    --home-navy-dark: #041f43;
+    --home-orange: #ff6900;
+    --home-blue: #075bd6;
+    --home-text: #162c4c;
+    --home-muted: #68788e;
+    --home-border: #e4e9f0;
+    --home-light: #f7f9fc;
+
+    margin: 0;
+
+    background: #ffffff;
+
+    color: var(--home-text);
+
+    font-family: 'Inter', sans-serif;
+}
+
+.home-soil-page * {
+    box-sizing: border-box;
+}
+
+.home-soil-page a {
+    text-decoration: none;
+}
+
+.home-soil-page img {
+    display: block;
+    max-width: 100%;
+}
+
+.home-container {
+    width: min(1180px, calc(100% - 48px));
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.home-header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e8ebef;
+}
+
+.home-nav {
+    width: min(1180px, calc(100% - 48px));
+
+    min-height: 82px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 35px;
+}
+
+.home-logo {
+    width: 220px;
+}
+
+.home-logo img {
+    width: 100%;
+
+    max-height: 58px;
+
+    object-fit: contain;
+}
+
+.home-menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 32px;
+
+    color: var(--home-navy-dark);
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.home-menu > a {
+    position: relative;
+
+    color: inherit;
+}
+
+.home-menu > a:not(.home-contact-btn)::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -9px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--home-orange);
+
+    transition: width .2s ease;
+}
+
+.home-menu > a:hover,
+.home-menu > a.active {
+    color: var(--home-orange);
+}
+
+.home-menu > a:hover::after,
+.home-menu > a.active::after {
+    width: 100%;
+}
+
+.home-contact-btn {
+    margin-left: 35px;
+
+    padding: 14px 23px;
+
+    border-radius: 9px;
+
+    background: var(--home-navy);
+
+    color: #ffffff !important;
+}
+
+.home-contact-btn:hover {
+    background: #08437e;
+}
+
+.home-menu-toggle {
+    display: none;
+
+    border: 0;
+
+    background: none;
+
+    color: var(--home-navy);
+
+    font-size: 27px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.home-soil-hero {
+    background: var(--home-navy);
+}
+
+.home-soil-hero-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 480px;
+}
+
+.home-soil-hero-content {
+    padding:
+        55px
+        55px
+        55px
+        max(45px, calc((100vw - 1180px) / 2));
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            110deg,
+            #062d5c 0%,
+            #07366e 100%
+        );
+}
+
+.home-breadcrumb {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 25px;
+
+    font-size: 12px;
+}
+
+.home-breadcrumb a {
+    color: #ffffff;
+}
+
+.home-breadcrumb span:last-child {
+    color: var(--home-orange);
+
+    font-weight: 700;
+}
+
+.home-soil-hero h1 {
+    margin: 0 0 18px;
+
+    color: #ffffff;
+
+    font-size: clamp(48px, 5vw, 65px);
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+.home-hero-description {
+    max-width: 570px;
+
+    margin: 0 0 34px;
+
+    color: rgba(255,255,255,.92);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* Hero image */
+
+.home-soil-hero-image {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 480px;
+}
+
+.home-soil-hero-image::before {
+    content: "";
+
+    position: absolute;
+
+    z-index: 2;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #07366e 0%,
+            rgba(7,54,110,.60) 12%,
+            transparent 35%
+        );
+}
+
+.home-soil-hero-image img {
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 480px;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   HERO FEATURES
+========================================================= */
+
+.home-hero-features {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    max-width: 570px;
+}
+
+.home-hero-feature {
+    padding: 0 20px;
+
+    text-align: center;
+
+    border-right:
+        1px solid rgba(255,255,255,.35);
+}
+
+.home-hero-feature:first-child {
+    padding-left: 0;
+}
+
+.home-hero-feature:last-child {
+    border-right: 0;
+}
+
+.home-feature-icon {
+    margin-bottom: 8px;
+
+    color: var(--home-orange);
+
+    font-size: 26px;
+}
+
+.home-hero-feature strong {
+    color: #ffffff;
+
+    font-size: 10px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   ABOUT SOIL TEST
+========================================================= */
+
+.home-soil-about {
+    padding: 80px 0 55px;
+
+    background: #ffffff;
+}
+
+.home-soil-about-grid {
+    display: grid;
+
+    grid-template-columns: .75fr 1.25fr;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+.home-soil-lab-image {
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    height: 350px;
+}
+
+.home-soil-lab-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.home-label {
+    margin: 0 0 7px;
+
+    color: var(--home-orange);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: .5px;
+}
+
+.home-soil-about-content h2 {
+    margin: 0 0 15px;
+
+    color: var(--home-navy);
+
+    font-size: 37px;
+
+    line-height: 1.1;
+}
+
+.home-soil-main-description {
+    margin: 0 0 32px;
+
+    color: #455971;
+
+    font-size: 13px;
+
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   SOIL PROPERTIES
+========================================================= */
+
+.home-soil-property-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.home-soil-property {
+    min-width: 0;
+}
+
+.home-property-icon {
+    width: 42px;
+
+    height: 42px;
+
+    margin-bottom: 10px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #f0f4f9;
+
+    color: var(--home-navy);
+
+    font-size: 18px;
+}
+
+.home-soil-property h3 {
+    margin: 0 0 6px;
+
+    color: var(--home-navy);
+
+    font-size: 11px;
+}
+
+.home-soil-property p {
+    margin: 0;
+
+    color: #68788e;
+
+    font-size: 9px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   MANFAAT & KEGUNAAN
+========================================================= */
+
+.home-soil-purpose {
+    padding: 20px 0 70px;
+}
+
+.home-soil-purpose-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+.home-purpose-card {
+    padding: 35px;
+
+    border: 1px solid #edf0f4;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f6f8fb
+        );
+
+    box-shadow:
+        0 8px 30px rgba(8,38,77,.04);
+}
+
+.home-purpose-card h2 {
+    margin: 0 0 25px;
+
+    color: var(--home-navy);
+
+    font-size: 25px;
+}
+
+.home-purpose-card ul {
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+.home-purpose-card li {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+
+    color: #344b67;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+.home-purpose-card li:last-child {
+    margin-bottom: 0;
+}
+
+.home-purpose-card li > span {
+    width: 18px;
+
+    height: 18px;
+
+    min-width: 18px;
+
+    display: grid;
+
+    place-items: center;
+
+    border: 2px solid var(--home-orange);
+
+    border-radius: 50%;
+
+    color: var(--home-orange);
+
+    font-size: 9px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   SERVICE SECTION
+========================================================= */
+
+.home-other-services {
+    padding: 15px 0 85px;
+}
+
+.home-section-heading {
+    max-width: 720px;
+
+    margin: 0 auto 35px;
+
+    text-align: center;
+}
+
+.home-section-heading h2 {
+    margin: 0 0 10px;
+
+    color: var(--home-navy);
+
+    font-size: 32px;
+
+    line-height: 1.2;
+}
+
+.home-section-heading > p:last-child {
+    margin: 0;
+
+    color: var(--home-muted);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   SERVICE CARDS
+========================================================= */
+
+.home-service-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.home-service-card {
+    min-height: 220px;
+
+    padding: 28px;
+
+    display: flex;
+
+    gap: 22px;
+
+    border: 1px solid var(--home-border);
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    color: inherit;
+
+    box-shadow:
+        0 7px 25px rgba(8,38,77,.055);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.home-service-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #c9daf0;
+
+    box-shadow:
+        0 14px 35px rgba(8,38,77,.11);
+}
+
+.home-service-icon {
+    width: 72px;
+
+    height: 72px;
+
+    min-width: 72px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 14px;
+
+    color: #ffffff;
+
+    font-size: 29px;
+}
+
+.home-service-icon.navy {
+    background: var(--home-navy);
+}
+
+.home-service-icon.orange {
+    background: var(--home-orange);
+}
+
+.home-service-content {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.home-service-content h3 {
+    margin: 2px 0 9px;
+
+    color: var(--home-navy);
+
+    font-size: 16px;
+}
+
+.home-service-content p {
+    margin: 0 0 20px;
+
+    color: var(--home-muted);
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+.home-service-button {
+    margin-top: auto;
+
+    width: max-content;
+
+    padding: 10px 20px;
+
+    border: 1px solid var(--home-navy);
+
+    border-radius: 7px;
+
+    color: var(--home-navy);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    transition: .2s;
+}
+
+.home-service-card:hover
+.home-service-button {
+    background: var(--home-navy);
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.home-footer {
+    padding: 50px 0 0;
+
+    background: #062a57;
+
+    color: #a9b8cc;
+}
+
+.home-footer-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.4fr
+        .8fr
+        .9fr
+        1.25fr;
+
+    gap: 50px;
+
+    padding-bottom: 38px;
+}
+
+
+/* FOOTER LOGO */
+
+.home-footer-logo {
+    display: block;
+
+    width: 220px;
+
+    height: auto;
+
+    max-height: 70px;
+
+    margin-bottom: 15px;
+
+    padding: 0;
+
+    border: 0;
+
+    border-radius: 0;
+
+    background: transparent;
+
+    object-fit: contain;
+
+    object-position: left center;
+}
+
+.home-footer-company p {
+    max-width: 270px;
+
+    margin: 0;
+
+    color: #9fb0c6;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+}
+
+.home-footer h3 {
+    margin: 0 0 15px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+}
+
+.home-footer-grid a,
+.home-footer-grid span {
+    display: block;
+
+    margin: 9px 0;
+
+    color: #aebdd0;
+
+    font-size: 11px;
+}
+
+.home-footer-grid a:hover {
+    color: #ffffff;
+}
+
+.home-footer-bottom {
+    padding: 20px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-top:
+        1px solid rgba(255,255,255,.13);
+
+    color: #8498b1;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   FLOATING WHATSAPP
+========================================================= */
+
+.floating-whatsapp {
+    position: fixed;
+
+    right: 28px;
+    bottom: 25px;
+
+    z-index: 9999;
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #25D366;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.20);
+
+    transition: .25s;
+}
+
+.floating-whatsapp:hover {
+    transform:
+        translateY(-4px)
+        scale(1.05);
+
+    background: #1fbd5b;
+}
+
+.floating-whatsapp svg {
+    width: 30px !important;
+    height: 30px !important;
+
+    min-width: 30px;
+    min-height: 30px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:950px) {
+
+    .home-menu-toggle {
+        display: block;
+    }
+
+    .home-menu {
+        position: absolute;
+
+        top: 82px;
+        left: 0;
+        right: 0;
+
+        display: none;
+
+        padding: 22px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 18px;
+
+        background: #ffffff;
+
+        box-shadow:
+            0 15px 30px rgba(0,0,0,.10);
+    }
+
+    .home-menu.open {
+        display: flex;
+    }
+
+    .home-contact-btn {
+        margin: 0;
+
+        text-align: center;
+    }
+
+    .home-soil-hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-soil-hero-content {
+        padding: 55px 35px;
+    }
+
+    .home-soil-hero-image {
+        min-height: 420px;
+    }
+
+    .home-soil-hero-image img {
+        min-height: 420px;
+    }
+
+    .home-soil-hero-image::before {
+        background:
+            linear-gradient(
+                180deg,
+                #07366e,
+                transparent 25%
+            );
+    }
+
+    .home-soil-about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .home-soil-property-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .home-service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-footer-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:600px) {
+
+    .home-container,
+    .home-nav {
+        width: calc(100% - 28px);
+    }
+
+    .home-logo {
+        width: 185px;
+    }
+
+    .home-soil-hero-content {
+        padding: 40px 22px;
+    }
+
+    .home-soil-hero h1 {
+        font-size: 45px;
+    }
+
+    .home-hero-features {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 25px 0;
+    }
+
+    .home-hero-feature:nth-child(2) {
+        border-right: 0;
+    }
+
+    .home-soil-hero-image,
+    .home-soil-hero-image img {
+        min-height: 310px;
+    }
+
+    .home-soil-about {
+        padding: 60px 0 40px;
+    }
+
+    .home-soil-lab-image {
+        height: 270px;
+    }
+
+    .home-soil-about-content h2 {
+        font-size: 31px;
+    }
+
+    .home-soil-property-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-soil-purpose-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-purpose-card {
+        padding: 27px 22px;
+    }
+
+    .home-service-card {
+        flex-direction: column;
+    }
+
+    .home-footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .home-footer-bottom {
+        flex-direction: column;
+
+        gap: 6px;
+    }
+
+    .floating-whatsapp {
+        right: 18px;
+        bottom: 18px;
+
+        width: 54px;
+        height: 54px;
+    }
+
+}
+
+/* =========================================================
+   MAPS / LOKASI
+========================================================= */
+
+.home-location {
+    padding: 85px 0;
+
+    background: #f7f9fc;
+}
+
+
+.home-location-grid {
+    display: grid;
+
+    grid-template-columns: .8fr 1.2fr;
+
+    gap: 35px;
+
+    align-items: stretch;
+}
+
+
+/* ================= INFO ================= */
+
+.home-location-info {
+    padding: 35px;
+
+    border: 1px solid #e4e9f0;
+
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 25px rgba(8, 38, 77, .05);
+}
+
+
+.home-location-info h2 {
+    margin: 0;
+
+    color: var(--home-navy);
+
+    font-size: 32px;
+
+    line-height: 1.2;
+}
+
+
+.home-location-line {
+    width: 50px;
+
+    height: 3px;
+
+    margin: 15px 0 20px;
+
+    border-radius: 10px;
+
+    background: var(--home-orange);
+}
+
+
+.home-location-description {
+    max-width: 420px;
+
+    margin: 0 0 27px;
+
+    color: var(--home-muted);
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+
+/* ================= CONTACT LIST ================= */
+
+.home-contact-list {
+    display: grid;
+
+    gap: 20px;
+}
+
+
+.home-contact-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+}
+
+
+.home-contact-icon {
+    width: 43px;
+
+    height: 43px;
+
+    min-width: 43px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 10px;
+
+    background: #edf4ff;
+
+    color: var(--home-blue);
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+.home-contact-item span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--home-navy);
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.home-contact-item a,
+.home-contact-item p {
+    margin: 0;
+
+    color: var(--home-muted);
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+
+.home-contact-item a:hover {
+    color: var(--home-blue);
+}
+
+
+/* ================= MAP ================= */
+
+.home-map-card {
+    min-height: 430px;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background: #e8edf3;
+
+    box-shadow:
+        0 10px 30px rgba(8, 38, 77, .08);
+}
+
+
+.home-map-card iframe {
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 430px;
+
+    display: block;
+
+    border: 0;
+}
+
+
+/* =========================================================
+   RUNNING TEXT
+========================================================= */
+
+.home-running-text {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    min-height: 62px;
+
+    overflow: hidden;
+
+    background: #082f61;
+
+    border-top: 3px solid var(--home-orange);
+
+    border-bottom: 3px solid var(--home-orange);
+}
+
+
+/* BADGE */
+
+.home-running-badge {
+    position: absolute;
+
+    left: 22px;
+
+    z-index: 5;
+
+    min-height: 36px;
+
+    padding: 0 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    border-radius: 100px;
+
+    background: var(--home-orange);
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 5px 15px rgba(255, 105, 0, .25);
+}
+
+
+.home-running-dot {
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    animation: homeRunningPulse 1.4s infinite;
+}
+
+
+@keyframes homeRunningPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .3;
+    }
+
+}
+
+
+/* AREA BERJALAN */
+
+.home-running-window {
+    width: 100%;
+
+    overflow: hidden;
+
+    padding-left: 175px;
+}
+
+
+.home-running-track {
+    width: max-content;
+
+    display: flex;
+
+    align-items: center;
+
+    animation:
+        homeRunningMove 30s linear infinite;
+}
+
+
+.home-running-track span {
+    position: relative;
+
+    padding: 0 35px;
+
+    color: rgba(255, 255, 255, .92);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+.home-running-track span::after {
+    content: "•";
+
+    position: absolute;
+
+    right: -3px;
+
+    color: var(--home-orange);
+}
+
+
+/* PAUSE SAAT HOVER */
+
+.home-running-text:hover
+.home-running-track {
+    animation-play-state: paused;
+}
+
+
+@keyframes homeRunningMove {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:950px) {
+
+    .home-location-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media(max-width:600px) {
+
+    .home-location {
+        padding: 60px 0;
+    }
+
+
+    .home-location-info {
+        padding: 25px 22px;
+    }
+
+
+    .home-location-info h2 {
+        font-size: 28px;
+    }
+
+
+    .home-map-card,
+    .home-map-card iframe {
+        min-height: 330px;
+    }
+
+
+    /* RUNNING TEXT */
+
+    .home-running-text {
+        min-height: 58px;
+    }
+
+
+    .home-running-badge {
+        left: 10px;
+
+        min-height: 32px;
+
+        padding: 0 12px;
+
+        font-size: 9px;
+    }
+
+
+    .home-running-window {
+        padding-left: 135px;
+    }
+
+
+    .home-running-track span {
+        padding: 0 25px;
+
+        font-size: 10px;
+    }
+
+}
+
+/* =========================
+   MOBILE FINAL FIX
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .home-soil-page {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .home-nav {
+        min-height: 72px;
+    }
+
+    .home-logo {
+        width: 170px;
+    }
+
+    .home-soil-hero-content {
+        padding: 35px 20px 40px;
+    }
+
+    .home-soil-hero h1 {
+        font-size: 42px;
+        line-height: 1.05;
+    }
+
+    .home-hero-description {
+        font-size: 13px;
+        line-height: 1.75;
+    }
+
+    .home-hero-features {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px 0;
+    }
+
+    .home-hero-feature {
+        padding: 0 12px;
+    }
+
+    .home-soil-hero-image,
+    .home-soil-hero-image img {
+        min-height: 280px;
+        height: 280px;
+    }
+
+    .home-soil-about-grid {
+        gap: 30px;
+    }
+
+    .home-soil-lab-image {
+        height: 240px;
+    }
+
+    .home-soil-main-description {
+        font-size: 12px;
+    }
+
+    .home-soil-property-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .home-soil-property {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .home-property-icon {
+        min-width: 42px;
+    }
+
+    .home-purpose-card {
+        padding: 24px 20px;
+    }
+
+    .home-purpose-card h2 {
+        font-size: 23px;
+    }
+
+    .home-service-card {
+        min-height: auto;
+        padding: 22px;
+        gap: 16px;
+    }
+
+    .home-service-icon {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+    }
+
+    .home-location-grid {
+        gap: 22px;
+    }
+
+    .home-map-card,
+    .home-map-card iframe {
+        min-height: 300px;
+    }
+
+    .home-running-track span {
+        font-size: 9px;
+        padding: 0 22px;
+    }
+
+    .home-footer-logo {
+        width: 190px;
+    }
+
+    .home-footer-grid {
+        gap: 25px;
+    }
+
+    .home-footer-bottom {
+        font-size: 9px;
+    }
+
+    .floating-whatsapp {
+        width: 52px;
+        height: 52px;
+        right: 16px;
+        bottom: 16px;
+    }
+
+}
+
+/* =========================================
+   MOBILE NAVBAR - HOME
+========================================= */
+
+@media (max-width: 950px) {
+
+    .home-header {
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+    }
+
+    .home-nav {
+        position: relative;
+        min-height: 72px;
+    }
+
+    .home-logo {
+        width: 175px;
+    }
+
+    .home-menu-toggle {
+        display: flex;
+
+        width: 44px;
+        height: 44px;
+
+        align-items: center;
+        justify-content: center;
+
+        border: none;
+        border-radius: 8px;
+
+        background: #f4f7fb;
+        color: var(--home-navy);
+
+        font-size: 24px;
+        line-height: 1;
+
+        cursor: pointer;
+
+        transition: .2s ease;
+    }
+
+    .home-menu-toggle:hover {
+        background: #eaf1f9;
+    }
+
+    .home-menu {
+        position: absolute;
+
+        top: calc(100% + 1px);
+        left: 0;
+        right: 0;
+
+        display: flex;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 10px 20px 18px;
+
+        background: #ffffff;
+
+        border-top: 1px solid #edf0f4;
+
+        box-shadow:
+            0 16px 30px rgba(8, 38, 77, .12);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateY(-12px);
+
+        pointer-events: none;
+
+        transition:
+            opacity .25s ease,
+            transform .25s ease,
+            visibility .25s ease;
+    }
+
+    .home-menu.open {
+        opacity: 1;
+        visibility: visible;
+
+        transform: translateY(0);
+
+        pointer-events: auto;
+    }
+
+    .home-menu > a {
+        width: 100%;
+
+        padding: 14px 6px;
+
+        border-bottom: 1px solid #edf0f4;
+
+        color: var(--home-navy-dark);
+
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .home-menu > a:not(.home-contact-btn)::after {
+        display: none;
+    }
+
+    .home-menu > a:hover,
+    .home-menu > a.active {
+        color: var(--home-orange);
+    }
+
+    .home-contact-btn {
+        margin: 14px 0 0;
+
+        padding: 14px !important;
+
+        border-bottom: none !important;
+
+        border-radius: 8px;
+
+        background: var(--home-navy);
+
+        color: #ffffff !important;
+
+        text-align: center;
     }
 
 }

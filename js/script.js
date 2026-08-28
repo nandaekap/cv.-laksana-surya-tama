@@ -432,3 +432,81 @@ if (activitySaveBtn) {
     );
 
 }
+
+/* =========================================
+   MOBILE NAVBAR HOME
+========================================= */
+
+const homeMenuToggle =
+    document.getElementById("homeMenuToggle");
+
+const homeMenu =
+    document.getElementById("homeMenu");
+
+
+if (homeMenuToggle && homeMenu) {
+
+    homeMenuToggle.addEventListener(
+        "click",
+        function () {
+
+            homeMenu.classList.toggle("open");
+
+            const isOpen =
+                homeMenu.classList.contains("open");
+
+
+            homeMenuToggle.innerHTML =
+                isOpen ? "×" : "☰";
+
+        }
+    );
+
+
+    /* Tutup menu saat link diklik */
+
+    const homeMenuLinks =
+        homeMenu.querySelectorAll("a");
+
+
+    homeMenuLinks.forEach(function (link) {
+
+        link.addEventListener(
+            "click",
+            function () {
+
+                homeMenu.classList.remove("open");
+
+                homeMenuToggle.innerHTML = "☰";
+
+            }
+        );
+
+    });
+
+
+    /* Tutup saat klik di luar */
+
+    document.addEventListener(
+        "click",
+        function (event) {
+
+            const klikDiMenu =
+                homeMenu.contains(event.target);
+
+            const klikDiTombol =
+                homeMenuToggle.contains(event.target);
+
+
+            if (!klikDiMenu && !klikDiTombol) {
+
+                homeMenu.classList.remove("open");
+
+                homeMenuToggle.innerHTML = "☰";
+
+            }
+
+        }
+    );
+
+}
