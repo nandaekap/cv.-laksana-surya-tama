@@ -510,3 +510,199 @@ if (homeMenuToggle && homeMenu) {
     );
 
 }
+
+/* =========================================
+   CONTACT MOBILE MENU
+========================================= */
+
+const contactMenuToggle =
+    document.getElementById("contactMenuToggle");
+
+const contactMenu =
+    document.getElementById("contactMenu");
+
+
+if (contactMenuToggle && contactMenu) {
+
+    function closeContactMenu() {
+
+        contactMenu.classList.remove("open");
+
+        contactMenuToggle.innerHTML = "☰";
+
+        contactMenuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    }
+
+
+    contactMenuToggle.addEventListener(
+        "click",
+        function () {
+
+            contactMenu.classList.toggle("open");
+
+
+            const isOpen =
+                contactMenu.classList.contains("open");
+
+
+            contactMenuToggle.innerHTML =
+                isOpen ? "×" : "☰";
+
+
+            contactMenuToggle.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
+            );
+
+        }
+    );
+
+
+    contactMenu
+        .querySelectorAll("a")
+        .forEach(function (link) {
+
+            link.addEventListener(
+                "click",
+                closeContactMenu
+            );
+
+        });
+
+
+    document.addEventListener(
+        "click",
+        function (event) {
+
+            if (
+                !contactMenu.contains(event.target) &&
+                !contactMenuToggle.contains(event.target)
+            ) {
+
+                closeContactMenu();
+
+            }
+
+        }
+    );
+
+
+    window.addEventListener(
+        "resize",
+        function () {
+
+            if (window.innerWidth > 950) {
+
+                closeContactMenu();
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =========================================
+   CONTACT FORM TO WHATSAPP
+========================================= */
+
+const whatsappContactForm =
+    document.getElementById("whatsappContactForm");
+
+
+if (whatsappContactForm) {
+
+    whatsappContactForm.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+
+            const name =
+                document
+                    .getElementById("contactName")
+                    .value
+                    .trim();
+
+
+            const phone =
+                document
+                    .getElementById("contactPhone")
+                    .value
+                    .trim();
+
+
+            const email =
+                document
+                    .getElementById("contactEmail")
+                    .value
+                    .trim();
+
+
+            const company =
+                document
+                    .getElementById("contactCompany")
+                    .value
+                    .trim();
+
+
+            const service =
+                document
+                    .getElementById("contactService")
+                    .value;
+
+
+            const message =
+                document
+                    .getElementById("contactMessage")
+                    .value
+                    .trim();
+
+
+            /* Nomor perusahaan tanpa + */
+
+            const whatsappNumber =
+                "6281211980367";
+
+
+            const whatsappMessage =
+`Halo CV. Laksana Surya Tama,
+
+Saya ingin berkonsultasi mengenai layanan Anda.
+
+Nama: ${name}
+No. Telepon: ${phone}
+Email: ${email || "-"}
+Perusahaan / Instansi: ${company || "-"}
+Layanan: ${service}
+
+Pesan:
+${message}
+
+Terima kasih.`;
+
+
+            const whatsappURL =
+                "https://wa.me/" +
+                whatsappNumber +
+                "?text=" +
+                encodeURIComponent(
+                    whatsappMessage
+                );
+
+
+            window.open(
+                whatsappURL,
+                "_blank"
+            );
+
+        }
+    );
+
+}
