@@ -706,3 +706,29 @@ Terima kasih.`;
     );
 
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const jackingMenuToggle =
+        document.getElementById("jackingMenuToggle");
+
+    const jackingMenu =
+        document.getElementById("jackingMenu");
+
+    if (jackingMenuToggle && jackingMenu) {
+
+        jackingMenuToggle.addEventListener("click", function () {
+
+            jackingMenu.classList.toggle("open");
+
+            const isOpen =
+                jackingMenu.classList.contains("open");
+
+            jackingMenuToggle.textContent =
+                isOpen ? "×" : "☰";
+
+        });
+
+    }
+
+});
