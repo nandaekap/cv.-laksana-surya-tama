@@ -1,5 +1,5 @@
 /* CLEANED STYLE.CSS — CV. LAKSANA SURYA TAMA */
-
+html, body { overflow-x: clip; max-width: 100%; }
 :root{
   --navy-900:#0A1F3D;
   --navy-800:#0F2A52;
@@ -15112,5 +15112,371 @@ a.footer-contact-item:hover {
     .floating-whatsapp {
         right: 18px !important;
         bottom: 18px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .company-advantage-card p,
+    .company-service-card p,
+    .company-soil-content p,
+    .company-soil-benefits p,
+    .company-cta p,
+    .home-location-description,
+    .home-contact-item a,
+    .home-contact-item p { font-size: 13px !important; }
+
+    .company-service-link,
+    .company-soil-content a,
+    .company-cta-button { font-size: 12px !important; }
+}
+
+/* =========================================================
+   HOMEPAGE MOBILE FINAL - 600PX KE BAWAH
+   ========================================================= */
+
+@media screen and (max-width: 600px) {
+
+    /* GLOBAL */
+    .home-soil-page {
+        overflow-x: hidden;
+    }
+
+    .home-container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+
+    /* HEADER */
+    .home-nav {
+        min-height: 68px;
+        padding: 0 18px;
+    }
+
+    .home-logo {
+        width: 145px;
+    }
+
+    .home-logo img {
+        width: 100%;
+        height: auto;
+    }
+
+    .home-menu-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+
+        width: 42px;
+        height: 42px;
+
+        border: 0;
+        border-radius: 9px;
+
+        background: #f4f7fb;
+        color: #082e5c;
+
+        font-size: 25px;
+    }
+
+    .home-menu {
+        display: none !important;
+
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+
+        padding: 16px 20px 22px;
+
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+
+        background: #ffffff;
+
+        border-top: 1px solid #e7ebf2;
+        box-shadow: 0 15px 30px rgba(8, 38, 77, .10);
+
+        z-index: 999;
+    }
+
+    .home-menu.open {
+        display: flex !important;
+    }
+
+    .home-menu a {
+        width: 100%;
+        padding: 11px 4px;
+    }
+
+    .home-contact-btn {
+        margin-top: 8px;
+        text-align: center;
+    }
+
+
+    /* HERO */
+    .company-hero-grid {
+        display: flex !important;
+        flex-direction: column !important;
+
+        width: 100%;
+        min-height: 0 !important;
+    }
+
+    .company-hero-content {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding: 42px 20px 32px !important;
+    }
+
+    .company-eyebrow {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    .company-hero-content h1 {
+        font-size: 36px !important;
+        line-height: 1.07 !important;
+        letter-spacing: -1.2px;
+    }
+
+    .company-hero-description {
+        max-width: 100% !important;
+
+        margin-top: 20px;
+
+        font-size: 13px !important;
+        line-height: 1.75;
+    }
+
+
+    /* BUTTON HERO */
+    .company-hero-buttons {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+        margin-top: 25px;
+    }
+
+    .company-btn {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 12px 8px;
+
+        font-size: 10px;
+        text-align: center;
+    }
+
+
+    /* 4 POINT HERO */
+    .company-hero-points {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+
+        width: 100%;
+
+        margin-top: 30px;
+    }
+
+    .company-hero-points > div {
+        min-height: 55px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 10px 6px;
+
+        text-align: center;
+
+        border-right: 0 !important;
+        border-bottom: 1px solid #e3e8ef;
+    }
+
+    .company-hero-points > div:nth-child(odd) {
+        border-right: 1px solid #e3e8ef !important;
+    }
+
+    .company-hero-points strong {
+        font-size: 10px;
+    }
+
+
+    /* FOTO HERO */
+    .company-hero-image {
+        position: relative !important;
+
+        width: 100% !important;
+
+        height: 300px !important;
+        min-height: 300px !important;
+
+        overflow: hidden;
+    }
+
+    .company-hero-image img {
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+
+
+    /* TENTANG KAMI */
+    .company-about {
+        padding: 60px 0;
+    }
+
+    .company-about-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+
+        gap: 30px !important;
+    }
+
+    .company-about-content,
+    .company-about-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .company-about-content h2 {
+        font-size: 28px !important;
+    }
+
+    .company-about-image img {
+        width: 100%;
+        height: auto;
+
+        border-radius: 12px;
+    }
+
+
+    /* KENAPA MEMILIH KAMI */
+    .company-advantages {
+        padding: 60px 0;
+    }
+
+    .company-section-heading h2 {
+        font-size: 27px !important;
+    }
+
+    .company-advantage-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+
+        gap: 14px !important;
+    }
+
+    .company-advantage-card {
+        width: 100%;
+        min-height: auto !important;
+
+        padding: 22px 20px;
+    }
+
+
+    /* LAYANAN */
+    .company-services {
+        padding: 60px 0;
+    }
+
+    .company-service-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+
+        gap: 14px !important;
+    }
+
+    .company-service-card {
+        width: 100%;
+        min-height: auto !important;
+
+        padding: 24px 20px;
+    }
+
+
+    /* SOIL TEST */
+    .company-soil-highlight {
+        padding: 60px 0;
+    }
+
+    .company-soil-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+
+        gap: 25px !important;
+    }
+
+    .company-soil-content,
+    .company-soil-benefits,
+    .company-soil-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .company-soil-image,
+    .company-soil-image img {
+        width: 100%;
+        height: 280px;
+        min-height: 280px;
+    }
+
+    .company-soil-image img {
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+
+    /* CTA */
+    .company-cta-inner {
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: flex-start !important;
+
+        gap: 22px !important;
+    }
+
+
+    /* MAP */
+    .home-location-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+
+        gap: 30px !important;
+    }
+
+    .home-map-card,
+    .home-map-card iframe {
+        width: 100%;
+        min-height: 300px;
+    }
+
+
+    /* FOOTER */
+    .home-footer-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+
+        gap: 30px !important;
+    }
+
+    .home-footer-bottom-new {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 10px;
     }
 }
