@@ -14623,17 +14623,15 @@ a.footer-contact-item:hover {
 }
 
 /* =========================================================
-   HOMEPAGE - MOBILE FIX
-   HP <= 768px
-   Desktop / tablet besar tidak berubah
+   HOMEPAGE - MOBILE FIX FINAL
+   Aktif hanya HP <= 768px
 ========================================================= */
 
 @media screen and (max-width: 768px) {
 
-    /* =========================================
-       GLOBAL MOBILE
-    ========================================= */
-
+    /* =========================
+       GLOBAL
+    ========================= */
     html,
     body {
         width: 100%;
@@ -14641,44 +14639,49 @@ a.footer-contact-item:hover {
         overflow-x: hidden;
     }
 
-    .home-container,
-    .company-container {
-        width: 100%;
-        max-width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
-        margin-left: auto;
-        margin-right: auto;
+    .home-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        box-sizing: border-box;
     }
 
 
-    /* =========================================
+    /* =========================
        HEADER
-    ========================================= */
-
-    .company-header {
+    ========================= */
+    .home-header {
         width: 100%;
     }
 
-    .company-nav-wrap {
-        width: calc(100% - 32px);
+    .home-nav {
+        width: 100% !important;
         min-height: 72px;
-        margin: 0 auto;
+        padding: 0 20px !important;
+        box-sizing: border-box;
+
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+
+        position: relative;
     }
 
-    .company-logo {
-        width: 175px;
-        max-width: 55%;
+    .home-logo {
+        width: auto !important;
+        max-width: 190px;
     }
 
-    .company-logo img {
-        width: 100%;
+    .home-logo img {
+        display: block;
+        width: 170px !important;
+        max-width: 100%;
         height: auto;
-        object-fit: contain;
     }
 
-    /* Tampilkan hamburger */
-    .company-menu-toggle {
+    /* Hamburger */
+    .home-menu-toggle {
         display: flex !important;
         align-items: center;
         justify-content: center;
@@ -14686,72 +14689,82 @@ a.footer-contact-item:hover {
         width: 44px;
         height: 44px;
 
+        margin-left: auto;
         padding: 0;
-        border: 0;
-        border-radius: 9px;
 
-        background: #f4f7fb;
+        border: 0;
+        background: transparent;
+
+        font-size: 28px;
+        line-height: 1;
         color: #0a2d5c;
 
-        font-size: 25px;
         cursor: pointer;
     }
 
-    /* Sembunyikan menu desktop */
-    .company-menu {
+    /* Menu mobile tertutup */
+    .home-menu {
         display: none !important;
 
-        position: absolute;
-        top: 72px;
+        position: absolute !important;
+        top: 100%;
         left: 0;
         right: 0;
 
-        width: 100%;
+        width: 100% !important;
 
-        padding: 18px 20px 22px;
+        padding: 15px 20px 20px !important;
 
-        flex-direction: column;
-        align-items: stretch;
-        gap: 4px;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0 !important;
 
         background: #ffffff;
 
-        border-top: 1px solid #edf0f4;
-
-        box-shadow:
-            0 15px 30px rgba(8, 38, 77, .10);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, .10);
 
         z-index: 9999;
     }
 
-    /* Menu muncul ketika JS memberi class open */
-    .company-menu.open {
+    /* Sesuaikan dengan class JS */
+    .home-menu.active,
+    .home-menu.open,
+    .home-menu.show {
         display: flex !important;
     }
 
-    .company-menu > a,
-    .company-dropdown > button {
-        width: 100%;
-        padding: 12px 0;
+    .home-menu > a {
+        display: block;
 
-        text-align: left;
+        width: 100%;
+
+        padding: 13px 0 !important;
 
         font-size: 14px;
+        text-align: left;
+
+        border-bottom: 1px solid #eef1f5;
     }
 
-    .company-header-cta {
-        width: 100%;
-        margin: 8px 0 0 !important;
-
+    .home-menu .home-contact-btn {
+        display: flex !important;
+        align-items: center;
         justify-content: center;
-        text-align: center !important;
+
+        width: 100% !important;
+
+        margin-top: 12px !important;
+        padding: 13px 18px !important;
+
+        border-bottom: 0;
+
+        text-align: center;
     }
 
 
-    /* =========================================
+    /* =========================
        HERO
-    ========================================= */
-
+    ========================= */
     .company-hero {
         min-height: auto !important;
     }
@@ -14767,24 +14780,29 @@ a.footer-contact-item:hover {
     .company-hero-content {
         width: 100% !important;
 
-        padding: 50px 20px 35px !important;
+        padding: 48px 20px 35px !important;
 
-        order: 1;
+        box-sizing: border-box;
+    }
+
+    .company-eyebrow {
+        font-size: 12px !important;
     }
 
     .company-hero h1 {
-        max-width: 100%;
+        max-width: 100% !important;
 
-        font-size: clamp(36px, 10vw, 48px) !important;
+        font-size: 42px !important;
         line-height: 1.05 !important;
         letter-spacing: -1.5px !important;
     }
 
     .company-hero-description {
+        width: 100%;
         max-width: 100% !important;
 
         font-size: 14px !important;
-        line-height: 1.75 !important;
+        line-height: 1.7 !important;
     }
 
     .company-hero-buttons {
@@ -14792,23 +14810,20 @@ a.footer-contact-item:hover {
         flex-direction: column !important;
 
         width: 100%;
-        gap: 12px;
+        gap: 12px !important;
 
-        margin-top: 27px;
+        margin-top: 25px;
     }
 
     .company-hero-buttons .company-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         width: 100% !important;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        box-sizing: border-box;
     }
-
-
-    /* =========================================
-       HERO POINTS
-    ========================================= */
 
     .company-hero-points {
         display: grid !important;
@@ -14816,43 +14831,101 @@ a.footer-contact-item:hover {
 
         width: 100%;
 
-        gap: 0 !important;
-
-        margin-top: 35px;
+        margin-top: 30px;
     }
 
     .company-hero-points > div {
         min-width: 0;
 
-        padding: 17px 10px !important;
+        padding: 15px 8px !important;
 
         text-align: center;
 
         border-right: 0 !important;
-        border-bottom: 1px solid #e6ebf1;
+        border-bottom: 1px solid #e7ebf0;
     }
 
     .company-hero-points > div:nth-child(odd) {
-        border-right: 1px solid #e6ebf1 !important;
+        border-right: 1px solid #e7ebf0 !important;
     }
 
-    .company-hero-points > div:nth-last-child(-n+2) {
+    .company-hero-points > div:nth-last-child(-n + 2) {
         border-bottom: 0;
     }
 
-
-    /* =========================================
-       KENAPA MEMILIH KAMI
-    ========================================= */
-
-    .company-advantages {
-        padding-top: 65px !important;
-        padding-bottom: 65px !important;
+    /* Foto hero */
+    .company-hero-image {
+        width: 100% !important;
+        min-height: 280px !important;
+        height: 280px !important;
     }
 
-    .company-advantages-grid,
-    .company-advantage-grid,
-    .company-values {
+    .company-hero-image img {
+        display: block;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+
+
+    /* =========================
+       TENTANG KAMI
+    ========================= */
+    .company-about {
+        padding: 60px 0 !important;
+    }
+
+    .company-about-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+
+        gap: 35px !important;
+    }
+
+    .company-about-content,
+    .company-about-image {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .company-about-content h2 {
+        font-size: 30px !important;
+        line-height: 1.2 !important;
+    }
+
+    .company-about-image img {
+        display: block;
+
+        width: 100% !important;
+        height: auto !important;
+
+        object-fit: cover;
+    }
+
+
+    /* =========================
+       KENAPA MEMILIH KAMI
+    ========================= */
+    .company-advantages {
+        padding: 60px 0 !important;
+    }
+
+    .company-section-heading {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin-bottom: 30px !important;
+    }
+
+    .company-section-heading h2 {
+        font-size: 29px !important;
+        line-height: 1.2 !important;
+    }
+
+    .company-advantage-grid {
         display: grid !important;
         grid-template-columns: 1fr !important;
 
@@ -14863,48 +14936,36 @@ a.footer-contact-item:hover {
         width: 100% !important;
         min-height: auto !important;
 
-        padding: 25px 22px !important;
+        padding: 24px 22px !important;
+
+        box-sizing: border-box;
     }
 
 
-    /* =========================================
-       SECTION HEADING
-    ========================================= */
-
-    .company-section-heading {
-        width: 100%;
-        max-width: 100%;
-
-        margin-left: auto;
-        margin-right: auto;
-
-        text-align: left;
+    /* =========================
+       LAYANAN
+    ========================= */
+    .company-services {
+        padding: 60px 0 !important;
     }
 
-    .company-section-heading h2 {
-        font-size: 28px !important;
+    .company-section-label {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin-bottom: 30px !important;
+    }
+
+    .company-section-label h2 {
+        font-size: 29px !important;
         line-height: 1.2 !important;
     }
 
-
-    /* =========================================
-       LAYANAN
-    ========================================= */
-
-    .company-services {
-        padding-top: 65px !important;
-        padding-bottom: 65px !important;
-    }
-
-    .company-services-grid,
     .company-service-grid {
         display: grid !important;
-
         grid-template-columns: 1fr !important;
 
         gap: 18px !important;
-
-        width: 100%;
     }
 
     .company-service-card {
@@ -14912,23 +14973,21 @@ a.footer-contact-item:hover {
         min-width: 0 !important;
         height: auto !important;
 
-        padding: 28px 22px !important;
+        padding: 27px 22px !important;
+
+        box-sizing: border-box;
     }
 
 
-    /* =========================================
+    /* =========================
        SOIL TEST
-    ========================================= */
-
-    .company-soil-test,
-    .soil-test-section {
-        width: 100%;
+    ========================= */
+    .company-soil-highlight {
+        padding: 60px 0 !important;
     }
 
-    .company-soil-grid,
-    .soil-test-grid {
+    .company-soil-grid {
         display: grid !important;
-
         grid-template-columns: 1fr !important;
 
         gap: 30px !important;
@@ -14941,65 +15000,82 @@ a.footer-contact-item:hover {
         max-width: 100% !important;
     }
 
-    .company-soil-image img,
-    .soil-test-image img {
+    .company-soil-content h2 {
+        font-size: 34px !important;
+    }
+
+    .company-soil-image img {
         display: block;
 
         width: 100% !important;
-        height: auto !important;
-        max-height: none !important;
+        height: 280px !important;
 
-        object-fit: cover;
+        object-fit: cover !important;
+        object-position: center !important;
     }
 
 
-    /* =========================================
+    /* =========================
        CTA
-    ========================================= */
-
+    ========================= */
     .company-cta {
-        padding-left: 20px !important;
-        padding-right: 20px !important;
+        padding: 50px 0 !important;
     }
 
-    .company-cta-container {
+    .company-cta-inner {
         display: flex !important;
         flex-direction: column !important;
         align-items: flex-start !important;
 
-        width: 100%;
-
-        gap: 22px !important;
-
-        padding: 28px 22px !important;
+        gap: 24px !important;
     }
 
-    .company-cta-container h2 {
-        font-size: 25px !important;
-        line-height: 1.25 !important;
+    .company-cta-inner h2 {
+        font-size: 28px !important;
+        line-height: 1.2 !important;
     }
 
-    .company-cta-buttons {
-        display: flex !important;
-        flex-direction: column !important;
-
-        width: 100%;
-
-        gap: 10px;
-    }
-
-    .company-cta-buttons a,
-    .company-cta-buttons .company-btn {
+    .company-cta-button {
         width: 100% !important;
 
+        display: flex !important;
         justify-content: center;
+
+        box-sizing: border-box;
     }
 
 
-    /* =========================================
-       FOOTER
-    ========================================= */
+    /* =========================
+       LOKASI
+    ========================= */
+    .home-location {
+        padding: 60px 0 !important;
+    }
 
+    .home-location-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+
+        gap: 35px !important;
+    }
+
+    .home-location-info,
+    .home-map-card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .home-map-card iframe {
+        display: block;
+
+        width: 100% !important;
+        min-height: 330px !important;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
     .home-footer-grid {
         display: grid !important;
         grid-template-columns: 1fr !important;
@@ -15010,8 +15086,8 @@ a.footer-contact-item:hover {
     .home-footer-company,
     .home-footer-column,
     .home-footer-contact {
-        width: 100%;
-        max-width: 100%;
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
     .home-footer-bottom-new {
@@ -15025,17 +15101,16 @@ a.footer-contact-item:hover {
     .home-footer-legal {
         display: flex;
         flex-wrap: wrap;
+
         gap: 8px;
     }
 
 
-    /* =========================================
-       FLOATING WHATSAPP
-    ========================================= */
-
+    /* =========================
+       WHATSAPP
+    ========================= */
     .floating-whatsapp {
         right: 18px !important;
         bottom: 18px !important;
     }
-
 }
