@@ -16149,3 +16149,1708 @@ a.footer-contact-item:hover {
     background: #f7f9fc !important;
     transform: translateY(-2px);
 }
+
+/* =========================================================
+   BUTTON KONSULTASI WHATSAPP
+========================================================= */
+
+.consultation-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    width: 100%;
+}
+
+.consultation-btn {
+    width: 100%;
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: 0.25s ease;
+}
+
+
+/* WHATSAPP */
+.consultation-whatsapp {
+    gap: 9px;
+
+    background: #25D366 !important;
+    color: #ffffff !important;
+
+    border: 1px solid #25D366 !important;
+
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.20);
+}
+
+.consultation-whatsapp:hover {
+    background: #20bd5a !important;
+    border-color: #20bd5a !important;
+
+    transform: translateY(-2px);
+}
+
+
+/* LOGO WHATSAPP */
+.consultation-wa-icon {
+    display: block !important;
+
+    width: 21px !important;
+    height: 21px !important;
+
+    min-width: 21px;
+
+    fill: #ffffff !important;
+    color: #ffffff !important;
+}
+
+.consultation-wa-icon path {
+    fill: #ffffff !important;
+}
+
+
+/* PELAJARI LEBIH LANJUT */
+.consultation-more {
+    background: #ffffff !important;
+    color: #0867db !important;
+
+    border: 1.5px solid #0867db !important;
+}
+
+.consultation-more:hover {
+    background: #f4f8ff !important;
+    transform: translateY(-2px);
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    .consultation-btn {
+        min-height: 46px;
+        font-size: 13px;
+    }
+
+    .consultation-wa-icon {
+        width: 20px !important;
+        height: 20px !important;
+    }
+}
+
+.pda-page .pda-hero-image {
+    margin-bottom: 18px;
+}
+
+.pda-page .consultation-buttons {
+    margin-top: 0;
+}
+
+/* =========================================================
+   PDA TEST - FOTO + BUTTON MOBILE FINAL
+========================================================= */
+
+@media screen and (max-width: 600px) {
+
+    .pda-page .pda-hero-content {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* Foto */
+    .pda-page .pda-hero-image {
+        position: relative !important;
+        order: initial !important;
+
+        width: 100% !important;
+        height: 260px !important;
+        min-height: 260px !important;
+
+        margin: 20px 0 0 !important;
+
+        border-radius: 12px !important;
+        overflow: hidden !important;
+    }
+
+    .pda-page .pda-hero-image img {
+        display: block !important;
+
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 0 !important;
+
+        object-fit: cover !important;
+        border-radius: 12px !important;
+    }
+
+    /* Tombol HARUS setelah foto */
+    .pda-page .pda-hero-image + .consultation-buttons {
+        position: static !important;
+        order: initial !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        width: 100% !important;
+
+        margin: 16px 0 0 !important;
+        padding: 0 !important;
+
+        gap: 12px !important;
+
+        transform: none !important;
+    }
+
+    .pda-page .consultation-btn {
+        width: 100% !important;
+        min-height: 48px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        box-sizing: border-box !important;
+
+        margin: 0 !important;
+        border-radius: 8px !important;
+
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+    }
+
+    /* WhatsApp */
+    .pda-page .consultation-whatsapp {
+        gap: 8px !important;
+
+        background: #25D366 !important;
+        border: 1px solid #25D366 !important;
+        color: #ffffff !important;
+    }
+
+    .pda-page .consultation-wa-icon {
+        display: block !important;
+
+        width: 20px !important;
+        height: 20px !important;
+
+        fill: #ffffff !important;
+    }
+
+    .pda-page .consultation-wa-icon path {
+        fill: #ffffff !important;
+    }
+
+    /* Pelajari */
+    .pda-page .consultation-more {
+        background: #ffffff !important;
+        border: 1.5px solid #0867db !important;
+        color: #0867db !important;
+    }
+
+}
+
+/* =========================================================
+   PDA TEST HERO - CLEAN FINAL VERSION
+========================================================= */
+
+.pda-page .pda-final-buttons {
+    display: flex;
+    gap: 12px;
+
+    width: 100%;
+
+    margin-top: 26px;
+}
+
+
+/* BASE BUTTON */
+.pda-page .pda-final-btn {
+    min-height: 48px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    padding: 12px 22px;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        border-color .2s ease;
+}
+
+
+/* =========================================================
+   WHATSAPP BUTTON
+========================================================= */
+
+.pda-page .pda-final-whatsapp {
+    gap: 8px;
+
+    background: #25D366;
+    border: 1px solid #25D366;
+
+    color: #ffffff;
+}
+
+
+.pda-page .pda-final-whatsapp svg {
+    display: block;
+
+    width: 20px;
+    height: 20px;
+
+    min-width: 20px;
+
+    fill: #ffffff;
+}
+
+
+.pda-page .pda-final-whatsapp svg path {
+    fill: #ffffff;
+}
+
+
+.pda-page .pda-final-whatsapp:hover {
+    background: #20bd5a;
+    border-color: #20bd5a;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   LEARN MORE BUTTON
+========================================================= */
+
+.pda-page .pda-final-more {
+    background: #ffffff;
+
+    border: 1.5px solid #0867db;
+
+    color: #0867db;
+}
+
+
+.pda-page .pda-final-more:hover {
+    background: #f4f8ff;
+
+    transform: translateY(-2px);
+}
+
+
+
+/* =========================================================
+   PDA MOBILE FINAL
+========================================================= */
+
+@media screen and (max-width: 600px) {
+
+    /* HERO */
+    .pda-page .pda-hero {
+        width: 100%;
+
+        padding: 0 !important;
+
+        background: #ffffff;
+
+        overflow: hidden;
+    }
+
+
+    /* CONTAINER */
+    .pda-page .pda-hero-container {
+        display: block !important;
+
+        width: 100% !important;
+        max-width: none !important;
+
+        min-height: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    /* CONTENT */
+    .pda-page .pda-hero-content {
+        display: flex !important;
+        flex-direction: column !important;
+
+        width: 100% !important;
+
+        margin: 0 !important;
+        padding: 30px 20px 0 !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* BREADCRUMB */
+    .pda-page .pda-breadcrumb {
+        margin: 0 0 28px !important;
+
+        font-size: 12px;
+    }
+
+
+    /* EYEBROW */
+    .pda-page .pda-eyebrow {
+        margin-bottom: 8px !important;
+
+        font-size: 12px !important;
+        font-weight: 700;
+
+        letter-spacing: 1.2px;
+    }
+
+
+    /* TITLE */
+    .pda-page .pda-hero-content h1 {
+        margin: 0 0 8px !important;
+
+        font-size: 42px !important;
+        line-height: 1 !important;
+    }
+
+
+    .pda-page .pda-hero-content h2 {
+        margin: 0 0 16px !important;
+
+        font-size: 23px !important;
+        line-height: 1.18 !important;
+    }
+
+
+    /* DESCRIPTION */
+    .pda-page .pda-description {
+        margin: 0 0 26px !important;
+
+        font-size: 13px !important;
+        line-height: 1.7 !important;
+    }
+
+
+
+    /* =====================================================
+       FEATURES
+    ====================================================== */
+
+    .pda-page .pda-features {
+        display: flex !important;
+        flex-direction: column !important;
+
+        width: 100% !important;
+
+        gap: 14px !important;
+
+        margin: 0 0 28px !important;
+        padding: 0 !important;
+    }
+
+
+    .pda-page .pda-feature {
+        display: flex !important;
+        align-items: center !important;
+
+        width: 100% !important;
+
+        gap: 12px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    .pda-page .pda-feature-icon {
+        flex: 0 0 34px !important;
+
+        width: 34px !important;
+        height: 34px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        box-sizing: border-box;
+
+        background: #ffffff !important;
+
+        border: 2px solid #0867db !important;
+        border-radius: 9px !important;
+
+        color: #0867db !important;
+
+        font-size: 16px !important;
+        font-weight: 700 !important;
+    }
+
+
+    .pda-page .pda-feature-text {
+        display: flex;
+        flex-direction: column;
+
+        gap: 3px;
+    }
+
+
+    .pda-page .pda-feature-text strong {
+        display: block;
+
+        color: #082e5c;
+
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+
+    .pda-page .pda-feature-text span {
+        display: block;
+
+        color: #7789a5;
+
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+
+
+    /* =====================================================
+       BUTTONS
+    ====================================================== */
+
+    .pda-page .pda-final-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+
+        width: 100% !important;
+
+        gap: 12px !important;
+
+        margin: 0 0 28px !important;
+        padding: 0 !important;
+    }
+
+
+    .pda-page .pda-final-btn {
+        width: 100% !important;
+        min-height: 47px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        box-sizing: border-box !important;
+
+        margin: 0 !important;
+        padding: 11px 16px !important;
+
+        border-radius: 8px !important;
+
+        font-size: 13px !important;
+        font-weight: 700 !important;
+
+        text-align: center;
+    }
+
+
+    /* WhatsApp */
+    .pda-page .pda-final-whatsapp {
+        gap: 8px !important;
+
+        background: #25D366 !important;
+
+        border: 1px solid #25D366 !important;
+
+        color: #ffffff !important;
+
+        box-shadow:
+            0 6px 18px rgba(37, 211, 102, 0.18);
+    }
+
+
+    .pda-page .pda-final-whatsapp svg {
+        display: block !important;
+
+        width: 19px !important;
+        height: 19px !important;
+
+        min-width: 19px !important;
+
+        fill: #ffffff !important;
+    }
+
+
+    .pda-page .pda-final-whatsapp svg path {
+        fill: #ffffff !important;
+    }
+
+
+    /* Pelajari */
+    .pda-page .pda-final-more {
+        background: #ffffff !important;
+
+        border: 1.5px solid #0867db !important;
+
+        color: #0867db !important;
+
+        box-shadow: none !important;
+    }
+
+
+
+    /* =====================================================
+       IMAGE
+    ====================================================== */
+
+    .pda-page .pda-hero-image {
+        position: relative !important;
+
+        display: block !important;
+
+        width: calc(100% + 40px) !important;
+
+        height: 330px !important;
+        min-height: 330px !important;
+
+        margin:
+            0
+            -20px
+            0
+            -20px !important;
+
+        padding: 0 !important;
+
+        overflow: hidden !important;
+
+        border-radius: 0 !important;
+
+        order: initial !important;
+    }
+
+
+    .pda-page .pda-hero-image img {
+        display: block !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        min-height: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        object-fit: cover !important;
+        object-position: center !important;
+
+        border-radius: 0 !important;
+    }
+
+}
+
+/* =========================================================
+   PDA MOBILE - FORCE FINAL ORDER
+   Breadcrumb > Judul > Deskripsi > Fitur > Button > Foto
+========================================================= */
+
+@media screen and (max-width: 600px) {
+
+    /* Matikan layout grid/flex lama */
+    .pda-page .pda-hero-container {
+        display: block !important;
+        width: 100% !important;
+        max-width: none !important;
+        min-height: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Content harus mengikuti urutan HTML */
+    .pda-page .pda-hero-content {
+        display: flex !important;
+        flex-direction: column !important;
+
+        width: 100% !important;
+        max-width: none !important;
+
+        padding: 32px 18px 0 !important;
+        margin: 0 !important;
+
+        box-sizing: border-box !important;
+    }
+
+    /* PENTING:
+       Paksa semua anak kembali ke urutan HTML */
+    .pda-page .pda-hero-content > * {
+        order: 0 !important;
+    }
+
+
+    /* =====================================
+       BREADCRUMB
+    ====================================== */
+
+    .pda-page .pda-breadcrumb {
+        position: static !important;
+
+        order: 1 !important;
+
+        width: 100% !important;
+
+        margin: 0 0 28px !important;
+        padding: 0 !important;
+    }
+
+
+    /* =====================================
+       LABEL
+    ====================================== */
+
+    .pda-page .pda-eyebrow {
+        order: 2 !important;
+
+        margin: 0 0 10px !important;
+    }
+
+
+    /* =====================================
+       PDA TEST
+    ====================================== */
+
+    .pda-page .pda-hero-content > h1 {
+        order: 3 !important;
+
+        margin: 0 0 10px !important;
+    }
+
+
+    /* =====================================
+       SUBTITLE
+    ====================================== */
+
+    .pda-page .pda-hero-content > h2 {
+        order: 4 !important;
+
+        margin: 0 0 16px !important;
+    }
+
+
+    /* =====================================
+       DESCRIPTION
+    ====================================== */
+
+    .pda-page .pda-description {
+        order: 5 !important;
+
+        margin: 0 0 25px !important;
+    }
+
+
+    /* =====================================
+       FEATURES
+    ====================================== */
+
+    .pda-page .pda-features {
+        order: 6 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        width: 100% !important;
+
+        gap: 14px !important;
+
+        margin: 0 0 26px !important;
+        padding: 0 !important;
+    }
+
+    .pda-page .pda-feature {
+        display: flex !important;
+        align-items: center !important;
+
+        gap: 12px !important;
+
+        width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    /* =====================================
+       BUTTON
+    ====================================== */
+
+    .pda-page .pda-final-buttons {
+        order: 7 !important;
+
+        position: static !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        width: 100% !important;
+
+        gap: 12px !important;
+
+        margin: 0 0 28px !important;
+        padding: 0 !important;
+
+        transform: none !important;
+    }
+
+    .pda-page .pda-final-btn {
+        width: 100% !important;
+        min-height: 47px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        margin: 0 !important;
+        padding: 11px 16px !important;
+
+        box-sizing: border-box !important;
+
+        border-radius: 8px !important;
+
+        font-size: 13px !important;
+        font-weight: 700 !important;
+    }
+
+
+    /* WHATSAPP */
+    .pda-page .pda-final-whatsapp {
+        gap: 8px !important;
+
+        background: #25D366 !important;
+        border: 1px solid #25D366 !important;
+
+        color: #ffffff !important;
+    }
+
+    .pda-page .pda-final-whatsapp svg {
+        display: block !important;
+
+        width: 19px !important;
+        height: 19px !important;
+
+        fill: #ffffff !important;
+    }
+
+    .pda-page .pda-final-whatsapp svg path {
+        fill: #ffffff !important;
+    }
+
+
+    /* PELAJARI */
+    .pda-page .pda-final-more {
+        background: #ffffff !important;
+
+        border: 1.5px solid #0867db !important;
+
+        color: #0867db !important;
+    }
+
+
+    /* =====================================
+       FOTO - WAJIB PALING BAWAH
+    ====================================== */
+
+    .pda-page .pda-hero-image {
+        order: 8 !important;
+
+        position: relative !important;
+        inset: auto !important;
+
+        display: block !important;
+
+        width: calc(100% + 36px) !important;
+
+        height: 330px !important;
+        min-height: 330px !important;
+
+        margin: 0 -18px !important;
+        padding: 0 !important;
+
+        transform: none !important;
+
+        overflow: hidden !important;
+
+        border-radius: 0 !important;
+    }
+
+    .pda-page .pda-hero-image img {
+        position: static !important;
+
+        display: block !important;
+
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        object-fit: cover !important;
+        object-position: center !important;
+
+        transform: none !important;
+
+        border-radius: 0 !important;
+    }
+
+}
+
+/* =========================================================
+   BORPILE - BUTTON WHATSAPP
+========================================================= */
+
+.borpile-page .borpile-whatsapp-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 9px !important;
+
+    background: #25D366 !important;
+    border-color: #25D366 !important;
+    color: #ffffff !important;
+
+    text-decoration: none !important;
+}
+
+.borpile-page .borpile-whatsapp-btn:hover {
+    background: #20bd5a !important;
+    border-color: #20bd5a !important;
+    color: #ffffff !important;
+}
+
+/* Logo WhatsApp */
+.borpile-page .borpile-wa-icon {
+    display: block !important;
+
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+
+    fill: #ffffff !important;
+    color: #ffffff !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.borpile-page .borpile-wa-icon path {
+    fill: #ffffff !important;
+}
+
+/* MOBILE */
+@media screen and (max-width: 600px) {
+
+    .borpile-page .borpile-whatsapp-btn {
+        width: 100% !important;
+        gap: 8px !important;
+    }
+
+    .borpile-page .borpile-wa-icon {
+        width: 19px !important;
+        height: 19px !important;
+        min-width: 19px !important;
+    }
+}
+
+/* =========================================================
+   PDA TEST DESKTOP - CLEAN RESET
+========================================================= */
+
+@media screen and (min-width: 901px) {
+
+    .pda-page .pda-hero {
+        position: relative !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+        background: #fff !important;
+    }
+
+    .pda-page .pda-hero-container {
+        width: 100% !important;
+        max-width: 1280px !important;
+        min-height: 560px !important;
+
+        margin: 0 auto !important;
+        padding: 0 !important;
+
+        display: block !important;
+        position: relative !important;
+    }
+
+    /* AREA KIRI */
+    .pda-page .pda-hero-content {
+        position: relative !important;
+
+        width: 50% !important;
+        min-height: 560px !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        box-sizing: border-box !important;
+
+        padding: 48px 45px 42px 55px !important;
+        margin: 0 !important;
+
+        overflow: visible !important;
+        z-index: 2 !important;
+    }
+
+    /* Breadcrumb */
+    .pda-page .pda-breadcrumb {
+        position: static !important;
+
+        width: 100% !important;
+
+        margin: 0 0 32px !important;
+        padding: 0 !important;
+
+        transform: none !important;
+    }
+
+    /* Label */
+    .pda-page .pda-eyebrow {
+        margin: 0 0 10px !important;
+    }
+
+    /* Judul */
+    .pda-page .pda-hero-content h1 {
+        margin: 0 0 12px !important;
+
+        font-size: 54px !important;
+        line-height: 1 !important;
+    }
+
+    /* Subtitle */
+    .pda-page .pda-hero-content h2 {
+        width: 100% !important;
+        max-width: 500px !important;
+
+        margin: 0 0 24px !important;
+
+        font-size: 30px !important;
+        line-height: 1.18 !important;
+    }
+
+    /* Deskripsi */
+    .pda-page .pda-description {
+        width: 100% !important;
+        max-width: 500px !important;
+
+        margin: 0 0 28px !important;
+
+        font-size: 14px !important;
+        line-height: 1.7 !important;
+    }
+
+
+    /* ==============================
+       FITUR
+    ============================== */
+
+    .pda-page .pda-features {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+
+        width: 100% !important;
+
+        gap: 16px !important;
+
+        margin: 0 0 30px !important;
+        padding: 0 !important;
+    }
+
+    .pda-page .pda-feature {
+        display: flex !important;
+        align-items: flex-start !important;
+
+        gap: 9px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .pda-page .pda-feature-icon {
+        width: 34px !important;
+        height: 34px !important;
+        min-width: 34px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        box-sizing: border-box !important;
+
+        background: #fff !important;
+
+        border: 2px solid #0867db !important;
+        border-radius: 8px !important;
+
+        color: #0867db !important;
+    }
+
+    .pda-page .pda-feature-text {
+        display: flex !important;
+        flex-direction: column !important;
+
+        min-width: 0 !important;
+        gap: 3px !important;
+    }
+
+    .pda-page .pda-feature-text strong {
+        font-size: 11px !important;
+        line-height: 1.3 !important;
+    }
+
+    .pda-page .pda-feature-text span {
+        font-size: 9px !important;
+        line-height: 1.4 !important;
+    }
+
+
+    /* ==============================
+       TOMBOL
+    ============================== */
+
+    .pda-page .pda-final-buttons {
+        position: static !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+
+        width: 100% !important;
+
+        gap: 12px !important;
+
+        margin: auto 0 0 !important;
+        padding: 0 !important;
+
+        transform: none !important;
+    }
+
+    .pda-page .pda-final-btn {
+        min-height: 50px !important;
+
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        padding: 12px 20px !important;
+
+        box-sizing: border-box !important;
+
+        border-radius: 8px !important;
+
+        font-size: 13px !important;
+        font-weight: 700 !important;
+
+        text-decoration: none !important;
+        white-space: nowrap !important;
+    }
+
+    .pda-page .pda-final-whatsapp {
+        min-width: 235px !important;
+
+        gap: 8px !important;
+
+        background: #25D366 !important;
+        border: 1px solid #25D366 !important;
+        color: #fff !important;
+    }
+
+    .pda-page .pda-final-whatsapp svg {
+        width: 19px !important;
+        height: 19px !important;
+        min-width: 19px !important;
+
+        fill: #fff !important;
+    }
+
+    .pda-page .pda-final-whatsapp svg path {
+        fill: #fff !important;
+    }
+
+    .pda-page .pda-final-more {
+        min-width: 175px !important;
+
+        background: #fff !important;
+
+        border: 1.5px solid #0867db !important;
+
+        color: #0867db !important;
+    }
+
+
+    /* ==============================
+       FOTO KANAN
+    ============================== */
+
+    .pda-page .pda-hero-image {
+        position: absolute !important;
+
+        top: 0 !important;
+        left: 100% !important;
+        right: auto !important;
+
+        width: 100% !important;
+        height: 560px !important;
+        min-height: 560px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        transform: none !important;
+
+        overflow: hidden !important;
+
+        border-radius: 0 !important;
+    }
+
+    .pda-page .pda-hero-image img {
+        position: static !important;
+
+        display: block !important;
+
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 560px !important;
+
+        margin: 0 !important;
+
+        object-fit: cover !important;
+        object-position: center !important;
+
+        transform: none !important;
+    }
+
+    /* Fade putih */
+    .pda-page .pda-hero-image::before {
+        content: "";
+
+        position: absolute !important;
+
+        top: 0 !important;
+        left: 0 !important;
+        bottom: 0 !important;
+
+        width: 100px !important;
+
+        z-index: 2 !important;
+
+        background: linear-gradient(
+            90deg,
+            #ffffff 0%,
+            rgba(255,255,255,.75) 35%,
+            rgba(255,255,255,0) 100%
+        ) !important;
+
+        pointer-events: none !important;
+    }
+}
+
+/* =========================================================
+   PDA TEST DESKTOP - MATCH BORPILE
+========================================================= */
+
+@media screen and (min-width: 901px) {
+
+    /* HERO */
+    .pda-page .pda-hero {
+        position: relative !important;
+        width: 100% !important;
+        min-height: 550px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background: #ffffff !important;
+        overflow: hidden !important;
+    }
+
+    .pda-page .pda-hero-container {
+        position: relative !important;
+
+        width: 100% !important;
+        max-width: 1280px !important;
+        min-height: 550px !important;
+
+        margin: 0 auto !important;
+        padding: 0 !important;
+
+        display: block !important;
+    }
+
+
+    /* =====================================================
+       BAGIAN KIRI
+    ====================================================== */
+
+    .pda-page .pda-hero-content {
+        position: relative !important;
+        z-index: 3 !important;
+
+        width: 50% !important;
+        min-height: 550px !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+
+        box-sizing: border-box !important;
+
+        padding: 50px 42px 30px 68px !important;
+        margin: 0 !important;
+
+        overflow: visible !important;
+    }
+
+
+    /* Breadcrumb */
+    .pda-page .pda-breadcrumb {
+        position: static !important;
+
+        margin: 0 0 32px !important;
+        padding: 0 !important;
+
+        font-size: 12px !important;
+
+        transform: none !important;
+    }
+
+
+    /* Label */
+    .pda-page .pda-eyebrow {
+        margin: 0 0 12px !important;
+
+        font-size: 12px !important;
+        font-weight: 700 !important;
+
+        letter-spacing: 1.2px !important;
+    }
+
+
+    /* PDA TEST */
+    .pda-page .pda-hero-content h1 {
+        margin: 0 0 12px !important;
+
+        font-size: 58px !important;
+        line-height: 1 !important;
+        font-weight: 800 !important;
+    }
+
+
+    /* Subtitle */
+    .pda-page .pda-hero-content h2 {
+        width: 100% !important;
+        max-width: 520px !important;
+
+        margin: 0 0 24px !important;
+
+        font-size: 31px !important;
+        line-height: 1.18 !important;
+        font-weight: 800 !important;
+    }
+
+
+    /* Description */
+    .pda-page .pda-description {
+        width: 100% !important;
+        max-width: 520px !important;
+
+        margin: 0 0 26px !important;
+
+        font-size: 14px !important;
+        line-height: 1.75 !important;
+    }
+
+
+    /* =====================================================
+       FEATURES - SAMA MODEL BORPILE
+    ====================================================== */
+
+    .pda-page .pda-features {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+
+        width: 100% !important;
+
+        gap: 18px !important;
+
+        margin: 0 0 28px !important;
+        padding: 0 !important;
+    }
+
+
+    .pda-page .pda-feature {
+        display: flex !important;
+        align-items: flex-start !important;
+
+        gap: 10px !important;
+
+        width: auto !important;
+        min-width: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    .pda-page .pda-feature-icon {
+        flex: 0 0 34px !important;
+
+        width: 34px !important;
+        height: 34px !important;
+        min-width: 34px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        box-sizing: border-box !important;
+
+        background: #ffffff !important;
+
+        border: 2px solid #0867db !important;
+        border-radius: 8px !important;
+
+        color: #0867db !important;
+
+        font-size: 16px !important;
+        font-weight: 700 !important;
+    }
+
+
+    .pda-page .pda-feature-text {
+        display: flex !important;
+        flex-direction: column !important;
+
+        min-width: 0 !important;
+
+        padding-top: 1px !important;
+
+        gap: 4px !important;
+    }
+
+
+    .pda-page .pda-feature-text strong {
+        display: block !important;
+
+        margin: 0 !important;
+
+        color: #082e5c !important;
+
+        font-size: 11px !important;
+        font-weight: 700 !important;
+        line-height: 1.3 !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    .pda-page .pda-feature-text span {
+        display: block !important;
+
+        color: #7789a5 !important;
+
+        font-size: 9px !important;
+        line-height: 1.4 !important;
+    }
+
+
+    /* =====================================================
+       BUTTON - SAMA POSISI BORPILE
+    ====================================================== */
+
+    .pda-page .pda-final-buttons {
+        position: static !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+
+        width: 100% !important;
+
+        gap: 12px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        transform: none !important;
+    }
+
+
+    .pda-page .pda-final-btn {
+        min-height: 46px !important;
+
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        box-sizing: border-box !important;
+
+        padding: 11px 20px !important;
+
+        border-radius: 8px !important;
+
+        font-size: 12px !important;
+        font-weight: 700 !important;
+
+        text-decoration: none !important;
+        white-space: nowrap !important;
+    }
+
+
+    /* WhatsApp */
+    .pda-page .pda-final-whatsapp {
+        width: 222px !important;
+        min-width: 222px !important;
+
+        gap: 8px !important;
+
+        background: #25D366 !important;
+
+        border: 1px solid #25D366 !important;
+
+        color: #ffffff !important;
+    }
+
+
+    .pda-page .pda-final-whatsapp svg {
+        display: block !important;
+
+        width: 18px !important;
+        height: 18px !important;
+        min-width: 18px !important;
+
+        fill: #ffffff !important;
+    }
+
+
+    .pda-page .pda-final-whatsapp svg path {
+        fill: #ffffff !important;
+    }
+
+
+    /* Pelajari */
+    .pda-page .pda-final-more {
+        width: 176px !important;
+        min-width: 176px !important;
+
+        background: #ffffff !important;
+
+        border: 1.5px solid #0867db !important;
+
+        color: #0867db !important;
+    }
+
+
+    /* =====================================================
+       FOTO KANAN - SEPERTI BORPILE
+    ====================================================== */
+
+    .pda-page .pda-hero-image {
+        position: absolute !important;
+
+        top: 0 !important;
+        left: 100% !important;
+        right: auto !important;
+
+        width: 100% !important;
+        height: 550px !important;
+        min-height: 550px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        overflow: hidden !important;
+
+        border-radius: 0 !important;
+
+        transform: none !important;
+        order: initial !important;
+    }
+
+
+    .pda-page .pda-hero-image img {
+        position: static !important;
+
+        display: block !important;
+
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 550px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        object-fit: cover !important;
+        object-position: center !important;
+
+        border-radius: 0 !important;
+
+        transform: none !important;
+    }
+
+
+    /* Fade kiri foto */
+    .pda-page .pda-hero-image::before {
+        content: "";
+
+        position: absolute !important;
+
+        top: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+
+        width: 115px !important;
+
+        z-index: 2 !important;
+
+        pointer-events: none !important;
+
+        background: linear-gradient(
+            90deg,
+            #ffffff 0%,
+            rgba(255,255,255,.90) 25%,
+            rgba(255,255,255,.45) 60%,
+            rgba(255,255,255,0) 100%
+        ) !important;
+    }
+
+}
+
+/* =========================================================
+   PDA TEST DESKTOP - RATA KIRI
+========================================================= */
+
+@media screen and (min-width: 901px) {
+
+    /* Geser seluruh konten kiri agar sejajar seperti Borpile */
+    .pda-page .pda-hero-content {
+        padding-left: 68px !important;
+        padding-right: 35px !important;
+
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+
+    /* Breadcrumb */
+    .pda-page .pda-breadcrumb {
+        width: 100% !important;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        text-align: left !important;
+    }
+
+    /* Label */
+    .pda-page .pda-eyebrow {
+        width: 100% !important;
+
+        margin-left: 0 !important;
+
+        text-align: left !important;
+    }
+
+    /* Judul PDA Test */
+    .pda-page .pda-hero-content h1 {
+        width: 100% !important;
+
+        margin-left: 0 !important;
+
+        text-align: left !important;
+    }
+
+    /* Subtitle */
+    .pda-page .pda-hero-content h2 {
+        width: 100% !important;
+        max-width: 520px !important;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        text-align: left !important;
+    }
+
+    /* Deskripsi */
+    .pda-page .pda-description {
+        width: 100% !important;
+        max-width: 520px !important;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        text-align: left !important;
+    }
+
+    /* Tiga keunggulan */
+    .pda-page .pda-features {
+        width: 100% !important;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        justify-content: flex-start !important;
+    }
+
+    /* Tombol */
+    .pda-page .pda-final-buttons {
+        width: 100% !important;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        justify-content: flex-start !important;
+    }
+}
+
+/* =========================================================
+   PDA DESKTOP - TITLE & DESCRIPTION GESER KE KIRI
+========================================================= */
+
+@media screen and (min-width: 901px) {
+
+    .pda-page .pda-eyebrow,
+    .pda-page .pda-hero-content h1,
+    .pda-page .pda-hero-content h2,
+    .pda-page .pda-description {
+        position: relative !important;
+        left: -68px !important;
+    }
+
+    /* Supaya area tulisan tetap cukup lebar */
+    .pda-page .pda-hero-content h2,
+    .pda-page .pda-description {
+        max-width: 520px !important;
+    }
+}
