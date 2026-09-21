@@ -668,7 +668,7 @@ if (whatsappContactForm) {
             /* Nomor perusahaan tanpa + */
 
             const whatsappNumber =
-                "6281211980367";
+                "6281315601312";
 
 
             const whatsappMessage =
